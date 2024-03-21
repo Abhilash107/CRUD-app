@@ -521,7 +521,33 @@ body{
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
+.sidebar{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, max-content) 1fr max-content;
+  background-color: var(--surface-container-low);
+  max-width: var(--sidebar-width);
+  width: 100%;
+  padding: var(--spacing-3);
+  border-radius: 0 var(--radius-large) var(--radius-large) 0;
+  box-shadow: var(--shadow-3);
+  z-index: 4;
+  visibility: hidden;
+  transition: transform var(--tr-duration-medium) var(--tr-easing-emphasized),
+  visibility var(--tr-duration-medium) var(--tr-easing-emphasized);
+  transition-property: transform, visibility;
+}
+.sidebar.active{
+  transform: translateX(0%);
+  visibility: visible;
+  
 
+}
 
 
 
