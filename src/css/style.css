@@ -525,7 +525,6 @@ body{
   position: fixed;
   top:0;
   bottom: 0;
-  right: 0;
   left: 0;
   display: grid;
   grid-template-columns: 1fr;
@@ -538,17 +537,17 @@ body{
   box-shadow: var(--shadow-3);
   z-index: 4;
   visibility: hidden;
-  transition: transform var(--tr-duration-medium) var(--tr-easing-emphasized),
-  visibility var(--tr-duration-medium) var(--tr-easing-emphasized);
+  transition:all ease-out 4000; 
   transition-property: transform, visibility;
 }
 .sidebar.active{
   transform: translateX(0%);
   visibility: visible;
-  
-
 }
 
+.sidebar .fab{
+  display: none;
+}
 
 
 
